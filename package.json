@@ -1,0 +1,27 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "Generates a quality, professional README file",
+  "main": "index.js",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siminski/readme-generator.git"
+  },
+  "keywords": [
+    "npm",
+    "install"
+  ],
+  "author": "Lauren Siminski Guardala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siminski/readme-generator/issues"
+  },
+  "homepage": "https://github.com/siminski/readme-generator#readme"
+}
