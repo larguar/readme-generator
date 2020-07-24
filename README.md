@@ -35,12 +35,12 @@ THEN I am taken to the corresponding section of the README
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [License](#license)
+* [Walkthrough](#walkthrough)
 * [Contributing](#contributing)
 * [Tests](#tests)
-* [Screenshots](#screenshots)
-* [Walkthrough](#walkthrough)
 * [FAQ](#faq)
+* [Credits](#credits)
+* [License](#license)
 
 
 ## Installation
@@ -48,22 +48,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula eleme
 
 
 ## Usage
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
-
-
-## License
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
-
-
-## Contributing
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
-
-
-## Tests
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
-
-
-## Screenshots
 ![Screenshot](http://placehold.it/952x600)
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
 
@@ -78,5 +62,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula eleme
 [![Walkthrough Video Link](http://placehold.it/952x600)](https://about.gitlab.com/handbook/markdown-guide/#images)
 
 
+## Contributing
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+
+
+## Tests
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+
+
 ## FAQ
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+
+
+## Credits
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+
+
+## License
+Copyright (c) 2020 Lauren Siminski. Licensed under the MIT license.
