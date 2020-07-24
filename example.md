@@ -3,6 +3,8 @@ When creating an open source project on GitHub, it is important to have a qualit
 
 ![HTML Badge](https://img.shields.io/badge/-HTML-323795) ![CSS Badge](https://img.shields.io/badge/-CSS-01A990) ![JavaScript Badge](https://img.shields.io/badge/-JavaScript-539436) ![API Badge](https://img.shields.io/badge/-API-F58021) ![Node.JS Badge](https://img.shields.io/badge/-Node.JS-CF1848) ![Express.JS Badge](https://img.shields.io/badge/-Express.JS-750460) ![MySQL Badge](https://img.shields.io/badge/-MySQL-61489C)
 
+![Application Screenshot](http://placehold.it/952x600)
+
 
 ## User Story
 ```
@@ -40,6 +42,7 @@ THEN I am taken to the corresponding section of the README
 * [Tests](#tests)
 * [FAQ](#faq)
 * [Credits](#credits)
+* [Donate](#donate)
 * [License](#license)
 
 
@@ -76,6 +79,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula eleme
 
 ## Credits
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+
+
+## Donate
+Say thanks with a $5 coffee:
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W21YVJJ)
 
 
 ## License

@@ -192,6 +192,7 @@ THEN ${then}` +
 * [Tests](#tests)
 * [FAQ](#faq)
 * [Credits](#credits)
+* [Donate](#donate)
 * [License](#license)
 
 
@@ -222,6 +223,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula eleme
 
 ## Credits
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+
+
+## Donate
+Say thanks with a $5 coffee:
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W21YVJJ)
 
 
 ## License
