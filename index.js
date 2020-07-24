@@ -226,7 +226,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula eleme
 
 
 ## Donate
-Say thanks with a $5 coffee:
+Appreciate this code? Say thanks with a coffee:
+
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W21YVJJ)
 
 
