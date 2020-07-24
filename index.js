@@ -49,12 +49,30 @@ function prompts() {
 			name: 'sothat',
 			prefix: 'User Story',
 			message: 'SO THAT:'
+		},
+		{
+			type: 'input',
+			name: 'given',
+			prefix: 'Functionality',
+			message: 'GIVEN:'
+		},
+		{
+			type: 'input',
+			name: 'when',
+			prefix: 'Functionality',
+			message: 'WHEN:'
+		},
+		{
+			type: 'input',
+			name: 'then',
+			prefix: 'Functionality',
+			message: 'THEN:'
 		}
 	]);
 }
 
 // adding the file formatting
-function generateFile({ title, description, languages, asa, iwant, sothat }) {	
+function generateFile({ title, description, languages, asa, iwant, sothat, given, when, then }) {	
 	
 	// split languages results into array
 	const langArray = [];
@@ -75,13 +93,34 @@ ${description}
 
 ${html}${css}${js}${api}${nodejs}${express}${sql}
 
+
 ## User Story` + 
 '\n```\n' +
 `As a ${asa}
 I want ${iwant}
 So that ${sothat}` +
+'\n```' +
+`
+
+
+## Functionality` +
 '\n```\n' +
-`more content`;
+`GIVEN ${given}
+WHEN ${when}
+THEN ${then}` +
+'\n```' +
+`
+
+
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Walkthrough](#walkthrough)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [FAQ](#faq)
+* [Credits](#credits)
+* [License](#license)`;
 }
 
 // writes the file based on the users answers and file formatting
