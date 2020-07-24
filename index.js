@@ -10,53 +10,78 @@ function prompts() {
 	return inquirer.prompt([
 		{
 			type: 'input',
-			name: 'input',
-			message: 'Add Some Input Text:'
+			name: 'title',
+			message: 'Project Title:'
 		},
 		{
-			type: 'number',
-			name: 'number',
-			message: 'Add a Number:'
-		},
-		{
-			type: 'confirm',
-			name: 'confirm',
-			message: 'A Yes/No Question:'
+			type: 'input',
+			name: 'description',
+			message: 'Project Description:'
 		},
 		{
 			type: 'checkbox',
-			name: 'checkbox',
-			message: 'Check Some Boxes:',
+			name: 'languages',
+			message: 'Languages Used:',
 			choices: [
-				'Option 1', 
-				'Option 2', 
-				'Option 3', 
-				'Option 4'
+				'HTML', 
+				'CSS', 
+				'JavaScript', 
+				'API',
+				'Node.JS',
+				'Express.JS',
+				'MySQL'
 			]
 		},
 		{
-			type: 'list',
-			name: 'list',
-			message: 'Select From the List:',
-			choices: [
-				'Option 1', 
-				'Option 2', 
-				'Option 3', 
-				'Option 4'
-			]
+			type: 'input',
+			name: 'asa',
+			prefix: 'User Story',
+			message: 'AS A:'
+		},	
+		{
+			type: 'input',
+			name: 'iwant',
+			prefix: 'User Story',
+			message: 'I WANT:'
+		},
+		{
+			type: 'input',
+			name: 'sothat',
+			prefix: 'User Story',
+			message: 'SO THAT:'
 		}
-		
 	]);
 }
 
 // adding the file formatting
-function generateFile({ input, number, confirm, checkbox, list }) {	
-	return `
-Input Example: ${input}
-Number Example: ${number}
-Confirm Example: ${confirm}
-Checkbox Example: ${checkbox}
-List Example: ${list}`;
+function generateFile({ title, description, languages, asa, iwant, sothat }) {	
+	
+	// split languages results into array
+	const langArray = [];
+	const lang = `${languages}`.split(',');
+	langArray.push(lang);
+	
+	// return badge if language is selected
+	const html = (langArray[0].includes('HTML')) ? '![HTML Badge](https://img.shields.io/badge/-HTML-323795) ':'';
+	const css = (langArray[0].includes('CSS')) ? '![CSS Badge](https://img.shields.io/badge/-CSS-01A990) ':'';
+	const js = (langArray[0].includes('JavaScript')) ? '![JavaScript Badge](https://img.shields.io/badge/-JavaScript-539436) ':'';
+	const api = (langArray[0].includes('API')) ? '![API Badge](https://img.shields.io/badge/-API-F58021) ':'';
+	const nodejs = (langArray[0].includes('Node.JS')) ? '![Node.JS Badge](https://img.shields.io/badge/-Node.JS-CF1848) ':'';
+	const express = (langArray[0].includes('Express.JS')) ? '![Express.JS Badge](https://img.shields.io/badge/-Express.JS-750460) ':'';
+	const sql = (langArray[0].includes('MySQL')) ? '![MySQL Badge](https://img.shields.io/badge/-MySQL-61489C) ':'';
+	
+	return `# ${title}
+${description}
+
+${html}${css}${js}${api}${nodejs}${express}${sql}
+
+## User Story` + 
+'\n```\n' +
+`As a ${asa}
+I want ${iwant}
+So that ${sothat}` +
+'\n```\n' +
+`more content`;
 }
 
 // writes the file based on the users answers and file formatting
