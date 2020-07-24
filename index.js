@@ -34,6 +34,11 @@ function prompts() {
 		},
 		{
 			type: 'input',
+			name: 'projectimage',
+			message: 'Project Image URL:'
+		},
+		{
+			type: 'input',
 			name: 'asa',
 			prefix: 'User Story',
 			message: 'AS A:'
@@ -67,12 +72,46 @@ function prompts() {
 			name: 'then',
 			prefix: 'Functionality',
 			message: 'THEN:'
+		},
+		{
+			type: 'number',
+			name: 'year',
+			prefix: 'License',
+			message: 'Year:'
+		},
+		{
+			type: 'input',
+			name: 'name',
+			prefix: 'License',
+			message: 'Your Name:'
+		},
+		{
+			type: 'list',
+			name: 'license',
+			prefix: 'License',
+			message: 'License Type:',
+			choices: [
+				'None',
+				'Apache License 2.0', 
+				'GNU General Public License v3.0', 
+				'MIT License', 
+				'BSD 2-Clause "Simplified" License',
+				'BSD 3-Clause "New" or "Revised" License',
+				'Boost Software License 1.0',
+				'Creative Commons Zero v1.0 Universal',
+				'Eclipse Public License 1.0',
+				'GNU Affero General Public License v3.0',
+				'GNU General Public License v2.0',
+				'GNU Lesser General Public License v2.1',
+				'Mozilla Public License 2.0',
+				'The Unlicense'
+			]
 		}
 	]);
 }
 
 // adding the file formatting
-function generateFile({ title, description, languages, asa, iwant, sothat, given, when, then }) {	
+function generateFile({ title, description, languages, projectimage, asa, iwant, sothat, given, when, then, year, name, license }) {	
 	
 	// split languages results into array
 	const langArray = [];
@@ -88,10 +127,14 @@ function generateFile({ title, description, languages, asa, iwant, sothat, given
 	const express = (langArray[0].includes('Express.JS')) ? '![Express.JS Badge](https://img.shields.io/badge/-Express.JS-750460) ':'';
 	const sql = (langArray[0].includes('MySQL')) ? '![MySQL Badge](https://img.shields.io/badge/-MySQL-61489C) ':'';
 	
+	const licenseText = (license === 'None') ? '':`Licensed under the ${license}`;
+	
 	return `# ${title}
 ${description}
 
 ${html}${css}${js}${api}${nodejs}${express}${sql}
+
+![Application Photo](${projectimage})
 
 
 ## User Story` + 
@@ -120,7 +163,46 @@ THEN ${then}` +
 * [Tests](#tests)
 * [FAQ](#faq)
 * [Credits](#credits)
-* [License](#license)`;
+* [License](#license)
+
+
+## Installation
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+
+
+## Usage
+![Screenshot](http://placehold.it/952x600)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+
+![Screenshot](http://placehold.it/952x600)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+
+![Screenshot](http://placehold.it/952x600)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+
+
+## Walkthrough
+[![Walkthrough Video Link](http://placehold.it/952x600)](https://about.gitlab.com/handbook/markdown-guide/#images)
+
+
+## Contributing
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+
+
+## Tests
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+
+
+## FAQ
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+
+
+## Credits
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+
+
+## License
+Copyright (c) ${year} ${name}. ${licenseText}`;
 }
 
 // writes the file based on the users answers and file formatting
