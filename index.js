@@ -103,6 +103,26 @@ function prompts() {
 			message: 'Video Link:'
 		},
 		{
+			type: 'input',
+			name: 'contributing',
+			message: 'Contributing Instructions:'
+		},
+		{
+			type: 'input',
+			name: 'tests',
+			message: 'Testing Instructions:'
+		},
+		{
+			type: 'input',
+			name: 'faq',
+			message: 'Frequently Asked Questions:'
+		},
+		{
+			type: 'input',
+			name: 'credits',
+			message: 'Project Credits:'
+		},
+		{
 			type: 'number',
 			name: 'year',
 			prefix: 'License',
@@ -140,7 +160,7 @@ function prompts() {
 }
 
 // adding the file formatting
-function generateFile({ title, description, languages, projectimage, asa, iwant, sothat, given, when, then, installation, usagepic, usagedesc, video, videolink, year, name, license }) {	
+function generateFile({ title, description, languages, projectimage, asa, iwant, sothat, given, when, then, installation, usagepic, usagedesc, video, videolink, contributing, tests, faq, credits, year, name, license }) {	
 	
 	// split languages results into array
 	const langArray = [];
@@ -210,19 +230,19 @@ ${usagedesc}
 
 
 ## Contributing
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+${contributing}
 
 
 ## Tests
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+${tests}
 
 
 ## FAQ
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+${faq}
 
 
 ## Credits
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+${credits}
 
 
 ## Donate
