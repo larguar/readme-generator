@@ -3,7 +3,7 @@ When creating an open source project on GitHub, it is important to have a qualit
 
 ![JavaScript Badge](https://img.shields.io/badge/-JavaScript-539436) ![Node.JS Badge](https://img.shields.io/badge/-Node.JS-CF1848) 
 
-![Application Photo](http://placehold.it/952x600)
+![Application Screenshot](http://placehold.it/952x600)
 
 
 ## User Story
@@ -38,18 +38,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula eleme
 
 
 ## Usage
-![Screenshot](http://placehold.it/952x600)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
-
-![Screenshot](http://placehold.it/952x600)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
-
-![Screenshot](http://placehold.it/952x600)
+![Application Screenshot](http://placehold.it/952x600)
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
 
 
 ## Walkthrough
-[![Walkthrough Video Link](http://placehold.it/952x600)](https://about.gitlab.com/handbook/markdown-guide/#images)
+[![Walkthrough Video Screenshot](http://placehold.it/952x600)](https://about.gitlab.com/handbook/markdown-guide/#images)
 
 
 ## Contributing
@@ -69,4 +63,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula eleme
 
 
 ## License
-Copyright (c) 2020 Lauren Siminski. Licensed under the Apache License 2.0
+Copyright (c) 2020 Lauren Siminski. 

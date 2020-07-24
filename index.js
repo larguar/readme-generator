@@ -74,6 +74,35 @@ function prompts() {
 			message: 'THEN:'
 		},
 		{
+			type: 'input',
+			name: 'installation',
+			message: 'Installation Instructions:'
+		},
+		{
+			type: 'input',
+			name: 'usagepic',
+			prefix: 'Usage',
+			message: 'Image URL:'
+		},
+		{
+			type: 'input',
+			name: 'usagedesc',
+			prefix: 'Usage',
+			message: 'Image Description:'
+		},
+		{
+			type: 'input',
+			name: 'video',
+			prefix: 'Walkthrough',
+			message: 'Video Image URL:'
+		},
+		{
+			type: 'input',
+			name: 'videolink',
+			prefix: 'Walkthrough',
+			message: 'Video Link:'
+		},
+		{
 			type: 'number',
 			name: 'year',
 			prefix: 'License',
@@ -111,7 +140,7 @@ function prompts() {
 }
 
 // adding the file formatting
-function generateFile({ title, description, languages, projectimage, asa, iwant, sothat, given, when, then, year, name, license }) {	
+function generateFile({ title, description, languages, projectimage, asa, iwant, sothat, given, when, then, installation, usagepic, usagedesc, video, videolink, year, name, license }) {	
 	
 	// split languages results into array
 	const langArray = [];
@@ -134,7 +163,7 @@ ${description}
 
 ${html}${css}${js}${api}${nodejs}${express}${sql}
 
-![Application Photo](${projectimage})
+![Application Screenshot](${projectimage})
 
 
 ## User Story` + 
@@ -167,22 +196,16 @@ THEN ${then}` +
 
 
 ## Installation
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+${installation}
 
 
 ## Usage
-![Screenshot](http://placehold.it/952x600)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
-
-![Screenshot](http://placehold.it/952x600)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
-
-![Screenshot](http://placehold.it/952x600)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+![Application Screenshot](${usagepic})
+${usagedesc}
 
 
 ## Walkthrough
-[![Walkthrough Video Link](http://placehold.it/952x600)](https://about.gitlab.com/handbook/markdown-guide/#images)
+[![Walkthrough Video Screenshot](${video})](${videolink})
 
 
 ## Contributing
