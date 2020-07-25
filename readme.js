@@ -215,6 +215,13 @@ function generateFile({ title, description, languages, projectimage, asa, iwant,
 	const hasFaq = (faq) ? '\n\n\n## FAQ\n' + faq:'';
 	const hasCredits = (credits) ? '\n\n\n## Credits\n' + credits:'';
 	
+	// if any of the above section are hidden, also hide their links in the table of contents
+	const videoAnchor = (video) ? '\n* [Walkthrough](#walkthrough)':'';
+	const contributingAnchor = (video) ? '\n* [Contributing](#contributing)':'';
+	const testsAnchor = (video) ? '\n* [Tests](#tests)':'';
+	const faqAnchor = (video) ? '\n* [FAQ](#faq)':'';
+	const creditsAnchor = (video) ? '\n* [Credits](#credits)':'';
+	
 	// license text to diplay if anything other than 'None' is selected
 	const licenseText = (license === 'None') ? '\n\n## License\nCopyright (c) ' + year + ' ' + name +'.':'\n\n## License\nCopyright (c) ' + year + ' ' + name +'. Licensed under the ' + license + '.';
 	
@@ -244,12 +251,7 @@ THEN ${then}` +
 
 ## Table of Contents
 * [Installation](#installation)
-* [Usage](#usage)
-* [Walkthrough](#walkthrough)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [FAQ](#faq)
-* [Credits](#credits)
+* [Usage](#usage) ${videoAnchor} ${contributingAnchor} ${testsAnchor} ${faqAnchor} ${creditsAnchor}
 * [Donate](#donate)
 * [License](#license)
 

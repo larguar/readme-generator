@@ -1,7 +1,7 @@
 # Good README Generator
 When creating an open source project on GitHub, it is important to have a quality README with information about the app: What is the app for? How do you use the app? How do you install it? How do you report issues? How do you make contributions? This command-line application allows for an efficient, easy generation of a project README to get started quickly. This allows a project creator to spend more time working on finishing the project and less time creating a good README.
 
-![HTML Badge](https://img.shields.io/badge/-HTML-323795) ![CSS Badge](https://img.shields.io/badge/-CSS-01A990) ![JavaScript Badge](https://img.shields.io/badge/-JavaScript-539436) ![API Badge](https://img.shields.io/badge/-API-F58021) ![Node.JS Badge](https://img.shields.io/badge/-Node.JS-CF1848) ![Express.JS Badge](https://img.shields.io/badge/-Express.JS-750460) ![MySQL Badge](https://img.shields.io/badge/-MySQL-61489C)  
+![HTML Badge](https://img.shields.io/badge/-HTML-323795) ![CSS Badge](https://img.shields.io/badge/-CSS-01A990) ![JavaScript Badge](https://img.shields.io/badge/-JavaScript-539436) ![API Badge](https://img.shields.io/badge/-API-F58021) ![Node.JS Badge](https://img.shields.io/badge/-Node.JS-CF1848)  
 
 
 ## User Story
@@ -22,12 +22,7 @@ THEN a quality, professional README.md is generated with the title of your proje
 
 ## Table of Contents
 * [Installation](#installation)
-* [Usage](#usage)
-* [Walkthrough](#walkthrough)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [FAQ](#faq)
-* [Credits](#credits)
+* [Usage](#usage)     
 * [Donate](#donate)
 * [License](#license)
 
@@ -57,4 +52,4 @@ Appreciate this code? Say thanks with a coffee:
 
 
 ## License
-Copyright (c) 2020 Lauren Siminski. Licensed under the MIT License.
+Copyright (c) 2020 Lauren Siminski. Licensed under the Apache License 2.0.
