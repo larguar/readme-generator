@@ -54,8 +54,17 @@ npm install inquirer
 
 
 ## Usage
-![Application Screenshot](img/node-readme.gif)
-Start the application by typing `npm readme`.     
+![Screenshot](img/node-readme.gif)
+Start the application by typing `npm readme`.
+
+![Screenshot](img/languages.gif)
+Make sure to select at least one Language you've used to display the badge in your file. You can select as many as you'd like.
+
+![Screenshot](img/singleline.gif)
+Note that **multilines are not supported at this time**. Only enter single paragraphs of text and manually edit them later if need be.
+
+![Screenshot](img/success.gif)
+Continue answering the prompts until you've reached the 'Success' message at the end.    
 
 
 ## Credits

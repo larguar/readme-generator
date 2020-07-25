@@ -17,36 +17,21 @@ So that I can quickly create a professional README for a new project
 ## Functionality
 ```
 WHEN I am prompted for information about my application repository
-THEN a quality, professional README.md is generated with the title of your project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+THEN a quality, professional README.md is generated with the title of my project, description, user story, functionality highlights, table of contents, installation, usage, walkthrough video, contributing, tests, questions, credits, donate, and license.
 WHEN I enter my project title
 THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added hear the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+WHEN I select which languages I used in my project
+THEN the badge for that language is displayed in my final file
+WHEN I answer all other prompts
+THEN this information is added to their appropriate sections
+WHEN I skip a non-required prompt
+THEN that section is hidden altogether in the final file
+WHEN I skip a required prompt
+THEN a default placeholder value is added to the final file to update later
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
 
-
-WHEN I am prompted for information about my application repository
-THEN a quality, professional README.md is generated with the title of your project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added hear the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
 
 ## Table of Contents
 * [Installation](#installation)
@@ -74,14 +59,25 @@ npm install inquirer
 
 
 ## Usage
-![Screenshot](http://placehold.it/952x600)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+![Screenshot](img/node-readme.gif)
+Start the application by typing `npm readme`.
+
+![Screenshot](img/languages.gif)
+Make sure to select at least one Language you've used to display the badge in your file. You can select as many as you'd like.
+
+![Screenshot](img/singleline.gif)
+Note that **multilines are not supported at this time**. Only enter single paragraphs of text and manually edit them later if need be.
+
+![Screenshot](img/success.gif)
+Continue answering the prompts until you've reached the 'Success' message at the end.
 
 ![Screenshot](http://placehold.it/952x600)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+Once generated, open up your readme file to make any changes you'd like before committing.
 
 ![Screenshot](http://placehold.it/952x600)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+Commit your file to Github and see it in action.
+
+![Screenshot](http://placehold.it/952x600)
 
 
 ## Walkthrough
