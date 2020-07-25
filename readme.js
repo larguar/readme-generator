@@ -11,12 +11,14 @@ function prompts() {
 		{
 			type: 'input',
 			name: 'title',
-			message: 'Project Title:'
+			message: 'Project Title:',
+			default: '{Add Project Title}'
 		},
 		{
 			type: 'input',
 			name: 'description',
-			message: 'Project Description:'
+			message: 'Project Description:',
+			default: '{Add Project Description}'
 		},
 		{
 			type: 'checkbox',
@@ -30,7 +32,7 @@ function prompts() {
 				'Node.JS',
 				'Express.JS',
 				'MySQL'
-			]
+			],
 		},
 		{
 			type: 'input',
@@ -41,43 +43,62 @@ function prompts() {
 			type: 'input',
 			name: 'asa',
 			prefix: 'User Story',
-			message: 'AS A:'
+			message: 'AS A:',
+			default: '{Add User Story}'
 		},	
 		{
 			type: 'input',
 			name: 'iwant',
 			prefix: 'User Story',
-			message: 'I WANT:'
+			message: 'I WANT:',
+			default: '{Add User Story}'
 		},
 		{
 			type: 'input',
 			name: 'sothat',
 			prefix: 'User Story',
-			message: 'SO THAT:'
+			message: 'SO THAT:',
+			default: '{Add User Story}'
 		},
 		{
 			type: 'input',
 			name: 'given',
 			prefix: 'Functionality',
-			message: 'GIVEN:'
+			message: 'GIVEN:',
+			default: '{Add Functionality Highlights}'
 		},
 		{
 			type: 'input',
 			name: 'when',
 			prefix: 'Functionality',
-			message: 'WHEN:'
+			message: 'WHEN:',
+			default: '{Add Functionality Highlights}'
 		},
 		{
 			type: 'input',
 			name: 'then',
 			prefix: 'Functionality',
-			message: 'THEN:'
+			message: 'THEN:',
+			default: '{Add Functionality Highlights}'
 		},
 		{
 			type: 'input',
 			name: 'installation',
-			message: 'Installation Instructions:'
+			message: 'Installation Instructions:',
+			default: '{Add Installation Instructions}'
 		},
+		{
+			type: 'confirm',
+			name: 'gitignore',
+			message: '.gitignore File Needed?',
+			default: false
+		},
+		{
+			type: 'input',
+			name: 'packages',
+			message: 'NPM Package to Install:'
+		}/*
+,
 		{
 			type: 'input',
 			name: 'usagepic',
@@ -156,16 +177,17 @@ function prompts() {
 				'The Unlicense'
 			]
 		}
+*/
 	]);
 }
 
 // adding the file formatting
-function generateFile({ title, description, languages, projectimage, asa, iwant, sothat, given, when, then, installation, usagepic, usagedesc, video, videolink, contributing, tests, faq, credits, year, name, license }) {	
+function generateFile({ title, description, languages, projectimage, asa, iwant, sothat, given, when, then, installation, gitignore, packages, usagepic, usagedesc, video, videolink, contributing, tests, faq, credits, year, name, license }) {	
 	
 	// split languages results into array
 	const langArray = [];
-	const lang = `${languages}`.split(',');
-	langArray.push(lang);
+	languages = `${languages}`.split(',');
+	langArray.push(languages);
 	
 	// return badge if language is selected
 	const html = (langArray[0].includes('HTML')) ? '![HTML Badge](https://img.shields.io/badge/-HTML-323795) ':'';
@@ -176,14 +198,21 @@ function generateFile({ title, description, languages, projectimage, asa, iwant,
 	const express = (langArray[0].includes('Express.JS')) ? '![Express.JS Badge](https://img.shields.io/badge/-Express.JS-750460) ':'';
 	const sql = (langArray[0].includes('MySQL')) ? '![MySQL Badge](https://img.shields.io/badge/-MySQL-61489C) ':'';
 	
+	// if we don't have a project image/screenshot, don't display the section
+	const hasProjectImage = (projectimage) ? '\n\n![Application Screenshot](' + projectimage + ')':'';
+
+	// if gitignore is true/Y, display gitignore instructions
+	const needsGitIgnore = (gitignore) ? '\n* Create (or update) a \`.gitignore\` file and add \`node_modules/\` and \`.DS_Store/\` to it.\n```\nnode_modules/\n.DS_Store/\n```':'';
+	
+	const hasPackage = (packages) ? '\n* Install the ' + packages + ' package through a command line npm install.\n```\nnpm install ' + packages.toLowerCase() + '\n```':'';
+	
+	// license text to diplay if anything other than 'None' is selected
 	const licenseText = (license === 'None') ? '':`Licensed under the ${license}`;
 	
 	return `# ${title}
 ${description}
 
-${html}${css}${js}${api}${nodejs}${express}${sql}
-
-![Application Screenshot](${projectimage})
+${html}${css}${js}${api}${nodejs}${express}${sql} ${hasProjectImage}
 
 
 ## User Story` + 
@@ -217,7 +246,7 @@ THEN ${then}` +
 
 
 ## Installation
-${installation}
+* ${installation} ${needsGitIgnore} ${hasPackage}
 
 
 ## Usage

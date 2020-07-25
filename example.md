@@ -47,7 +47,16 @@ THEN I am taken to the corresponding section of the README
 
 
 ## Installation
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vehicula elementum ex vel rutrum. Etiam auctor sem in ipsum luctus, non mollis lorem bibendum. Cras eget fermentum sapien.
+* Download the `readme.js` file from this repository and add it to your own repository folder.
+* Create (or update) a `.gitignore` file and add `node_modules/` and `.DS_Store/` to it.
+```
+node_modules/
+.DS_Store/
+```
+* Install the Inquirer package through a command line npm install.
+```
+npm install inquirer
+```
 
 
 ## Usage
