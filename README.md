@@ -1,7 +1,7 @@
 # Good README Generator
 When creating an open source project on GitHub, it is important to have a quality README with information about the app: What is the app for? How do you use the app? How do you install it? How do you report issues? How do you make contributions? This command-line application allows for an efficient, easy generation of a project README to get started quickly. This allows a project creator to spend more time working on finishing the project and less time creating a good README.
 
-![JavaScript Badge](https://img.shields.io/badge/-JavaScript-539436) ![Node.JS Badge](https://img.shields.io/badge/-Node.JS-CF1848)  
+![HTML Badge](https://img.shields.io/badge/-HTML-323795) ![CSS Badge](https://img.shields.io/badge/-CSS-01A990) ![JavaScript Badge](https://img.shields.io/badge/-JavaScript-539436) ![API Badge](https://img.shields.io/badge/-API-F58021) ![Node.JS Badge](https://img.shields.io/badge/-Node.JS-CF1848) ![Express.JS Badge](https://img.shields.io/badge/-Express.JS-750460) ![MySQL Badge](https://img.shields.io/badge/-MySQL-61489C)  
 
 
 ## User Story
@@ -34,40 +34,20 @@ THEN a quality, professional README.md is generated with the title of your proje
 
 ## Installation
 * Download the `readme.js` file from this repository and add it to your own repository folder. 
-* Create (or update) a `.gitignore` file and add `node_modules/` and `.DS_Store/` to it.
+* Create (or update) a `.gitignore` file and add `node_modules/` and `.DS_Store/` to it:
 ```
 node_modules/
 .DS_Store/
 ``` 
-* Install the Inquirer package through a command line npm install.
+* Install the inquirer package through a command line npm install:
 ```
 npm install inquirer
 ```
 
 
 ## Usage
-asdcasdc
 ![Application Screenshot](http://placehold.it/952x600)
-
-
-## Walkthrough
-[![Walkthrough Video Screenshot](http://placehold.it/952x600)](sdvfsdfv) 
-
-
-## Contributing
-fghnfghn 
-
-
-## Tests
-fghnfghn 
-
-
-## FAQ
-sdfvsdv 
-
-
-## Credits
-fghnfgnh
+{Description}     
 
 
 ## Donate

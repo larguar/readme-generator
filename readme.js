@@ -100,12 +100,6 @@ function prompts() {
 		},
 		{
 			type: 'input',
-			name: 'usagedesc',
-			prefix: 'Usage',
-			message: 'Image Description:'
-		},
-		{
-			type: 'input',
 			name: 'usagepic',
 			prefix: 'Usage',
 			message: 'Image URL:',
@@ -113,10 +107,15 @@ function prompts() {
 		},
 		{
 			type: 'input',
+			name: 'usagedesc',
+			prefix: 'Usage',
+			message: 'Image Description:'
+		},
+		{
+			type: 'input',
 			name: 'video',
 			prefix: 'Walkthrough',
-			message: 'Video Image URL:',
-			default: 'http://placehold.it/952x600'
+			message: 'Video Image URL:'
 		},
 		{
 			type: 'input',
@@ -204,12 +203,13 @@ function generateFile({ title, description, languages, projectimage, asa, iwant,
 	const hasProjectImage = (projectimage) ? '\n\n![Application Screenshot](' + projectimage + ')':'';
 
 	// if gitignore is true/Y, display gitignore instructions
-	const needsGitIgnore = (gitignore) ? '\n* Create (or update) a \`.gitignore\` file and add \`node_modules/\` and \`.DS_Store/\` to it.\n```\nnode_modules/\n.DS_Store/\n```':'';
+	const needsGitIgnore = (gitignore) ? '\n* Create (or update) a \`.gitignore\` file and add \`node_modules/\` and \`.DS_Store/\` to it:\n```\nnode_modules/\n.DS_Store/\n```':'';
 	
 	// if a package name is entered, display this list item
-	const hasPackage = (packages) ? '\n* Install the ' + packages + ' package through a command line npm install.\n```\nnpm install ' + packages.toLowerCase() + '\n```':'';
+	const hasPackage = (packages) ? '\n* Install the ' + packages + ' package through a command line npm install:\n```\nnpm install ' + packages.toLowerCase() + '\n```':'';
 	
 	// if we don't type anything for these sections, don't display them
+	const hasVideo = (video) ? '\n\n\n## Walkthrough\n[![Walkthrough Video Screenshot](' + video + ')](' + videolink + ')':'';
 	const hasContributing = (contributing) ? '\n\n\n## Contributing\n' + contributing:'';
 	const hasTests = (tests) ? '\n\n\n## Tests\n' + tests:'';
 	const hasFaq = (faq) ? '\n\n\n## FAQ\n' + faq:'';
@@ -259,12 +259,8 @@ THEN ${then}` +
 
 
 ## Usage
-${usagedesc}
 ![Application Screenshot](${usagepic})
-
-
-## Walkthrough
-[![Walkthrough Video Screenshot](${video})](${videolink}) ${hasContributing} ${hasTests} ${hasFaq} ${hasCredits}
+${usagedesc} ${hasVideo} ${hasContributing} ${hasTests} ${hasFaq} ${hasCredits}
 
 
 ## Donate
