@@ -62,30 +62,15 @@ function prompts() {
 		},
 		{
 			type: 'input',
-			name: 'given',
+			name: 'functionality',
 			prefix: 'Functionality',
-			message: 'GIVEN:',
-			default: '{Add Functionality Highlights}'
-		},
-		{
-			type: 'input',
-			name: 'when',
-			prefix: 'Functionality',
-			message: 'WHEN:',
-			default: '{Add Functionality Highlights}'
-		},
-		{
-			type: 'input',
-			name: 'then',
-			prefix: 'Functionality',
-			message: 'THEN:',
+			message: 'WHEN/THEN:',
 			default: '{Add Functionality Highlights}'
 		},
 		{
 			type: 'input',
 			name: 'installation',
-			message: 'Installation Instructions:',
-			default: '{Add Installation Instructions}'
+			message: 'Installation Instructions:'
 		},
 		{
 			type: 'confirm',
@@ -135,13 +120,23 @@ function prompts() {
 		},
 		{
 			type: 'input',
-			name: 'faq',
-			message: 'Frequently Asked Questions:'
+			name: 'credits',
+			message: 'Project Credits:'
 		},
 		{
 			type: 'input',
-			name: 'credits',
-			message: 'Project Credits:'
+			name: 'email',
+			message: 'Email:'
+		},
+		{
+			type: 'input',
+			name: 'website',
+			message: 'Portfolio Website:'
+		},
+		{
+			type: 'input',
+			name: 'github',
+			message: 'Github Username:'
 		},
 		{
 			type: 'number',
@@ -183,7 +178,7 @@ function prompts() {
 }
 
 // adding the file formatting
-function generateFile({ title, description, languages, projectimage, asa, iwant, sothat, given, when, then, installation, gitignore, packages, usagepic, usagedesc, video, videolink, contributing, tests, faq, credits, year, name, license }) {	
+function generateFile({ title, description, languages, projectimage, asa, iwant, sothat, functionality, installation, gitignore, packages, usagepic, usagedesc, video, videolink, contributing, tests, credits, email, website, github, year, name, license }) {	
 	
 	// split languages results into array
 	const langArray = [];
@@ -209,18 +204,23 @@ function generateFile({ title, description, languages, projectimage, asa, iwant,
 	const hasPackage = (packages) ? '\n* Install the ' + packages + ' package through a command line npm install:\n```\nnpm install ' + packages.toLowerCase() + '\n```':'';
 	
 	// if we don't type anything for these sections, don't display them
+	const hasInstallation = (installation) ? '\n\n\n## Installation\n* ' + installation + needsGitIgnore + hasPackage:'';
+	const hasUsageDesc = (usagedesc) ? '\n' + usagedesc:'';
 	const hasVideo = (video) ? '\n\n\n## Walkthrough\n[![Walkthrough Video Screenshot](' + video + ')](' + videolink + ')':'';
 	const hasContributing = (contributing) ? '\n\n\n## Contributing\n' + contributing:'';
 	const hasTests = (tests) ? '\n\n\n## Tests\n' + tests:'';
-	const hasFaq = (faq) ? '\n\n\n## FAQ\n' + faq:'';
 	const hasCredits = (credits) ? '\n\n\n## Credits\n' + credits:'';
+	const hasWebsite = (website) ? '\n* Website: ' + website:'';
+	const hasGithub = (github) ? '\n* Github: [@' + github + '](https://github.com/' + github + ')':'';
+	const hasQuestions = (email) ? '\n\n\n## Questions\nIf you have any questions, feel free to find me at:\n* Email: ' + email + hasWebsite + hasGithub:'';
 	
 	// if any of the above section are hidden, also hide their links in the table of contents
+	const installAnchor = (installation) ? '\n* [Install](#installation)':'';
 	const videoAnchor = (video) ? '\n* [Walkthrough](#walkthrough)':'';
-	const contributingAnchor = (video) ? '\n* [Contributing](#contributing)':'';
-	const testsAnchor = (video) ? '\n* [Tests](#tests)':'';
-	const faqAnchor = (video) ? '\n* [FAQ](#faq)':'';
-	const creditsAnchor = (video) ? '\n* [Credits](#credits)':'';
+	const contributingAnchor = (contributing) ? '\n* [Contributing](#contributing)':'';
+	const testsAnchor = (tests) ? '\n* [Tests](#tests)':'';
+	const creditsAnchor = (credits) ? '\n* [Credits](#credits)':'';
+	const questionsAnchor = (email) ? '\n* [Questions](#questions)':'';
 	
 	// license text to diplay if anything other than 'None' is selected
 	const licenseText = (license === 'None') ? '\n\n## License\nCopyright (c) ' + year + ' ' + name +'.':'\n\n## License\nCopyright (c) ' + year + ' ' + name +'. Licensed under the ' + license + '.';
@@ -231,7 +231,7 @@ ${description}
 ${html}${css}${js}${api}${nodejs}${express}${sql} ${hasProjectImage}
 
 
-## User Story` + 
+## User Story` +
 '\n```\n' +
 `As a ${asa}
 I want ${iwant}
@@ -242,27 +242,19 @@ So that ${sothat}` +
 
 ## Functionality` +
 '\n```\n' +
-`GIVEN ${given}
-WHEN ${when}
-THEN ${then}` +
+`${functionality}` +
 '\n```' +
 `
 
 
-## Table of Contents
-* [Installation](#installation)
-* [Usage](#usage) ${videoAnchor} ${contributingAnchor} ${testsAnchor} ${faqAnchor} ${creditsAnchor}
+## Table of Contents ${installAnchor}
+* [Usage](#usage) ${videoAnchor} ${contributingAnchor} ${testsAnchor} ${questionsAnchor} ${creditsAnchor}
 * [Donate](#donate)
-* [License](#license)
-
-
-## Installation
-* ${installation} ${needsGitIgnore} ${hasPackage}
+* [License](#license) ${hasInstallation}
 
 
 ## Usage
-![Application Screenshot](${usagepic})
-${usagedesc} ${hasVideo} ${hasContributing} ${hasTests} ${hasFaq} ${hasCredits}
+![Application Screenshot](${usagepic}) ${usagedesc} ${hasVideo} ${hasContributing} ${hasTests} ${hasCredits} ${hasQuestions}
 
 
 ## Donate
