@@ -37,28 +37,28 @@ THEN {Add Functionality Highlights}
 
 
 ## Usage
-![Application Screenshot](undefined)
-undefined
+![Application Screenshot](http://placehold.it/952x600)
+
 
 
 ## Walkthrough
-[![Walkthrough Video Screenshot](undefined)](undefined)
+[![Walkthrough Video Screenshot](http://placehold.it/952x600)]()
 
 
 ## Contributing
-undefined
+
 
 
 ## Tests
-undefined
+
 
 
 ## FAQ
-undefined
+
 
 
 ## Credits
-undefined
+
 
 
 ## Donate
@@ -68,4 +68,4 @@ Appreciate this code? Say thanks with a coffee:
 
 
 ## License
-Copyright (c) undefined undefined. Licensed under the undefined
+Copyright (c) {Year} {Your Name}.

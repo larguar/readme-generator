@@ -97,13 +97,6 @@ function prompts() {
 			type: 'input',
 			name: 'packages',
 			message: 'NPM Package to Install:'
-		}/*
-,
-		{
-			type: 'input',
-			name: 'usagepic',
-			prefix: 'Usage',
-			message: 'Image URL:'
 		},
 		{
 			type: 'input',
@@ -113,9 +106,17 @@ function prompts() {
 		},
 		{
 			type: 'input',
+			name: 'usagepic',
+			prefix: 'Usage',
+			message: 'Image URL:',
+			default: 'http://placehold.it/952x600'
+		},
+		{
+			type: 'input',
 			name: 'video',
 			prefix: 'Walkthrough',
-			message: 'Video Image URL:'
+			message: 'Video Image URL:',
+			default: 'http://placehold.it/952x600'
 		},
 		{
 			type: 'input',
@@ -147,13 +148,15 @@ function prompts() {
 			type: 'number',
 			name: 'year',
 			prefix: 'License',
-			message: 'Year:'
+			message: 'Year:',
+			default: '{Year}'
 		},
 		{
 			type: 'input',
 			name: 'name',
 			prefix: 'License',
-			message: 'Your Name:'
+			message: 'Your Name:',
+			default: '{Your Name}'
 		},
 		{
 			type: 'list',
@@ -177,7 +180,6 @@ function prompts() {
 				'The Unlicense'
 			]
 		}
-*/
 	]);
 }
 
@@ -207,7 +209,7 @@ function generateFile({ title, description, languages, projectimage, asa, iwant,
 	const hasPackage = (packages) ? '\n* Install the ' + packages + ' package through a command line npm install.\n```\nnpm install ' + packages.toLowerCase() + '\n```':'';
 	
 	// license text to diplay if anything other than 'None' is selected
-	const licenseText = (license === 'None') ? '':`Licensed under the ${license}`;
+	const licenseText = (license === 'None') ? '\n\n## License\nCopyright (c) ' + year + ' ' + name +'.':'\n\n## License\nCopyright (c) ' + year + name +'. Licensed under the ' + license + '.';
 	
 	return `# ${title}
 ${description}
@@ -278,10 +280,7 @@ ${credits}
 Appreciate this code? Say thanks with a coffee:
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W21YVJJ)
-
-
-## License
-Copyright (c) ${year} ${name}. ${licenseText}`;
+${licenseText}`;
 }
 
 // writes the file based on the users answers and file formatting
