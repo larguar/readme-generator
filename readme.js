@@ -206,10 +206,17 @@ function generateFile({ title, description, languages, projectimage, asa, iwant,
 	// if gitignore is true/Y, display gitignore instructions
 	const needsGitIgnore = (gitignore) ? '\n* Create (or update) a \`.gitignore\` file and add \`node_modules/\` and \`.DS_Store/\` to it.\n```\nnode_modules/\n.DS_Store/\n```':'';
 	
+	// if a package name is entered, display this list item
 	const hasPackage = (packages) ? '\n* Install the ' + packages + ' package through a command line npm install.\n```\nnpm install ' + packages.toLowerCase() + '\n```':'';
 	
+	// if we don't type anything for these sections, don't display them
+	const hasContributing = (contributing) ? '\n\n\n## Contributing\n' + contributing:'';
+	const hasTests = (tests) ? '\n\n\n## Tests\n' + tests:'';
+	const hasFaq = (faq) ? '\n\n\n## FAQ\n' + faq:'';
+	const hasCredits = (credits) ? '\n\n\n## Credits\n' + credits:'';
+	
 	// license text to diplay if anything other than 'None' is selected
-	const licenseText = (license === 'None') ? '\n\n## License\nCopyright (c) ' + year + ' ' + name +'.':'\n\n## License\nCopyright (c) ' + year + name +'. Licensed under the ' + license + '.';
+	const licenseText = (license === 'None') ? '\n\n## License\nCopyright (c) ' + year + ' ' + name +'.':'\n\n## License\nCopyright (c) ' + year + ' ' + name +'. Licensed under the ' + license + '.';
 	
 	return `# ${title}
 ${description}
@@ -252,28 +259,12 @@ THEN ${then}` +
 
 
 ## Usage
-![Application Screenshot](${usagepic})
 ${usagedesc}
+![Application Screenshot](${usagepic})
 
 
 ## Walkthrough
-[![Walkthrough Video Screenshot](${video})](${videolink})
-
-
-## Contributing
-${contributing}
-
-
-## Tests
-${tests}
-
-
-## FAQ
-${faq}
-
-
-## Credits
-${credits}
+[![Walkthrough Video Screenshot](${video})](${videolink}) ${hasContributing} ${hasTests} ${hasFaq} ${hasCredits}
 
 
 ## Donate
