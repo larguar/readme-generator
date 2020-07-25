@@ -205,7 +205,7 @@ function generateFile({ title, description, languages, projectimage, asa, iwant,
 	
 	// if we don't type anything for these sections, don't display them
 	const hasInstallation = (installation) ? '\n\n\n## Installation\n* ' + installation + needsGitIgnore + hasPackage:'';
-	const hasUsageDesc = (usagedesc) ? '\n' + usagedesc:'';
+	const hasUsageDesc = (usagedesc) ? '\n' + usagedesc + '\n\n':'';
 	const hasVideo = (video) ? '\n\n\n## Walkthrough\n[![Walkthrough Video Screenshot](' + video + ')](' + videolink + ')':'';
 	const hasContributing = (contributing) ? '\n\n\n## Contributing\n' + contributing:'';
 	const hasTests = (tests) ? '\n\n\n## Tests\n' + tests:'';
@@ -253,8 +253,8 @@ So that ${sothat}` +
 * [License](#license) ${hasInstallation}
 
 
-## Usage
-![Application Screenshot](${usagepic}) ${usagedesc} ${hasVideo} ${hasContributing} ${hasTests} ${hasCredits} ${hasQuestions}
+## Usage ${usagedesc}
+![Application Screenshot](${usagepic}) ${hasVideo} ${hasContributing} ${hasTests} ${hasCredits} ${hasQuestions}
 
 
 ## Donate
