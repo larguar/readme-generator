@@ -54,17 +54,24 @@ npm install inquirer
 
 
 ## Usage
+Start the application by typing `npm readme`:
 ![Screenshot](img/node-readme.gif)
-Start the application by typing `npm readme`.
 
+Make sure to select at least one programming language that you've used in order to display the badge in your file (you can select multiple if you'd like):
 ![Screenshot](img/languages.gif)
-Make sure to select at least one Language you've used to display the badge in your file. You can select as many as you'd like.
 
+Note that multilines are not supported at this time. Only enter single paragraphs of text and you can manually edit them later if need be:
 ![Screenshot](img/singleline.gif)
-Note that **multilines are not supported at this time**. Only enter single paragraphs of text and manually edit them later if need be.
 
-![Screenshot](img/success.gif)
-Continue answering the prompts until you've reached the 'Success' message at the end.    
+Continue answering the prompts until you've reached the 'Success' message at the end:
+![Screenshot](img/success.gif) 
+
+Once generated, open up your readme file to make any changes you'd like before committing:
+![Screenshot](img/coda.gif)
+
+Commit your file to Github and see it in action:
+![Screenshot](img/git-commit.gif)
+![Screenshot](img/readme.gif)  
 
 
 ## Credits
