@@ -3,6 +3,8 @@ When creating an open source project on GitHub, it is important to have a qualit
 
 ![JavaScript Badge](https://img.shields.io/badge/-JavaScript-539436) ![Node.JS Badge](https://img.shields.io/badge/-Node.JS-CF1848)  
 
+![Application Screenshot](img/node-readme.gif)
+
 
 ## User Story
 ```
@@ -15,25 +17,26 @@ So that I can quickly create a professional README for a new project
 ## Functionality
 ```
 WHEN I am prompted for information about my application repository
-THEN a quality, professional README.md is generated with the title of my project, description, user story, functionality highlights, table of contents, installation, usage, walkthrough video, contributing, tests, questions, credits, donate, and license. 
-WHEN I enter my project title 
-THEN this is displayed as the title of the README 
-WHEN I select which languages I used in my project 
-THEN the badge for that language is displayed in my final file 
-WHEN I answer all other prompts 
-THEN this information is added to their appropriate sections 
-WHEN I skip a non-required prompt 
-THEN that section is hidden altogether in the final file 
-WHEN I skip a required prompt 
-THEN a default placeholder value is added to the final file to update later 
-WHEN I click on the links in the Table of Contents 
+THEN a quality, professional README.md is generated with the title of my project, description, user story, functionality highlights, table of contents, installation, usage, walkthrough video, contributing, tests, questions, credits, donate, and license.
+WHEN I enter my project title
+THEN this is displayed as the title of the README
+WHEN I select which languages I used in my project
+THEN the badge for that language is displayed in my final file
+WHEN I answer all other prompts
+THEN this information is added to their appropriate sections
+WHEN I skip a non-required prompt
+THEN that section is hidden altogether in the final file
+WHEN I skip a required prompt
+THEN a default placeholder value is added to the final file to update later
+WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
 
 
 ## Table of Contents 
 * [Install](#installation)
-* [Usage](#usage)    
+* [Usage](#usage) 
+* [Walkthrough](#walkthrough)   
 * [Questions](#questions) 
 * [Credits](#credits)
 * [Donate](#donate)
@@ -53,7 +56,7 @@ npm install inquirer
 ```
 
 
-## Usage
+## Usage 
 * Start the application by typing `npm readme`:
 
 ![Screenshot](img/node-readme.gif)
@@ -77,7 +80,11 @@ npm install inquirer
 * Commit your file to Github and see it in action:
 
 ![Screenshot](img/git-commit.gif)
-![Screenshot](img/readme.gif) 
+![Screenshot](img/readme.gif)
+
+
+## Walkthrough
+[![Walkthrough Video Screenshot](img/video.png)](img/readme.mp4)   
 
 
 ## Credits
