@@ -45,10 +45,12 @@ THEN I am taken to the corresponding section of the README
 
 ## Installation
 * Download the `readme.js` file from this repository and add it to your own repository folder.
-* Create (or update) a `.gitignore` file and add `node_modules/` and `.DS_Store/` to it:
+* Create (or update) a `.gitignore` file and add the following to it:
 ```
 node_modules/
-.DS_Store/
+readme.js
+package-lock.json
+.DS_Store
 ```
 * Install the Inquirer package through a command line npm install:
 ```
