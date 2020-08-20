@@ -248,7 +248,7 @@ So that ${sothat}` +
 
 
 ## Table of Contents ${installAnchor}
-* [Usage](#usage) ${videoAnchor} ${contributingAnchor} ${testsAnchor} ${questionsAnchor} ${creditsAnchor}
+* [Usage](#usage) ${videoAnchor} ${contributingAnchor} ${testsAnchor} ${creditsAnchor} ${questionsAnchor} 
 * [Donate](#donate)
 * [License](#license) ${hasInstallation}
 
